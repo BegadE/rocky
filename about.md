@@ -26,5 +26,3 @@ Rocky is my favorite penguin species: The Rockhopper. They have got funky yellow
 - Find my work on [GitHub]({{ site.social.github }}).
 - Download my résumé (add a PDF to `assets/files/`, then link it here).
 
-> Tip: personality beats completeness. A few specific details are more memorable than a long formal biography.
-

@@ -123,11 +123,6 @@ button, input { font: inherit; }
 .hero-mascot-rest { top: -5.7%; left: -7%; width: 114%; max-width: none; height: 114%; animation: rocky-wave-rest 1.1s steps(1, end) infinite; }
 @keyframes rocky-wave-up { 0%, 49.9% { opacity: 1; } 50%, 100% { opacity: 0; } }
 @keyframes rocky-wave-rest { 0%, 49.9% { opacity: 0; } 50%, 100% { opacity: 1; } }
-.manifesto { padding-block: 54px; color: var(--ink); background: var(--surface); border-block: 1px solid var(--line); }
-.manifesto-grid { display: grid; grid-template-columns: 100px 1.5fr .7fr; gap: clamp(30px, 6vw, 90px); align-items: start; }
-.section-number { margin: 8px 0 0; font-family: var(--mono); font-size: 10px; letter-spacing: .12em; opacity: .75; }
-.manifesto blockquote { margin: 0; color: var(--accent); font-size: clamp(25px, 3vw, 38px); font-weight: 600; line-height: 1.3; letter-spacing: -.03em; }
-.manifesto-grid > p:last-child { margin: 5px 0 0; color: var(--ink-soft); font-size: 14px; }
 .section-block { padding-block: 90px; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 30px; margin-bottom: 50px; }
 .section-heading h2 { margin: 0; font-size: clamp(32px, 4vw, 46px); letter-spacing: -.045em; line-height: 1.1; }
@@ -238,8 +233,6 @@ button, input { font: inherit; }
   :root { --shell: min(100% - 32px, 700px); }
   .hero { min-height: auto; grid-template-columns: minmax(0, 1fr) 125px; gap: 30px; padding-block: 60px 70px; }
   .hero-mascot { width: 125px; }
-  .manifesto-grid { grid-template-columns: 1fr; gap: 20px; }
-  .section-number { margin: 0; }
   .shelf-grid { grid-template-columns: 1fr; }
   .shelf-card { min-height: 200px; }
   .page-heading-with-mascot { grid-template-columns: minmax(0, 1fr) 170px; gap: 30px; }
@@ -259,7 +252,6 @@ button, input { font: inherit; }
   .hero-mascot { width: 115px; justify-self: end; }
   .hero h1 { font-size: clamp(43px, 13vw, 62px); }
   .hero-intro { font-size: 18px; }
-  .manifesto { padding-block: 42px; }
   .section-block { padding-block: 75px; }
   .section-heading { display: block; margin-bottom: 35px; }
   .section-heading .text-link { display: inline-block; margin-top: 20px; }
