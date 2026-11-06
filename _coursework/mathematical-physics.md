@@ -3,7 +3,7 @@ title: Mathematical Physics
 code: PHYS 721
 term: Spring 2026
 topic: Physics
-order: 3
+order: 4
 status: In progress
 back_url: /coursework/
 back_label: coursework

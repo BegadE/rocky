@@ -3,7 +3,7 @@ title: Electromagnetism
 code: PHYS 715
 term: Fall 2025
 topic: Physics
-order: 2
+order: 3
 status: Complete
 back_url: /coursework/
 back_label: coursework

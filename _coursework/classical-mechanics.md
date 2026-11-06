@@ -3,7 +3,7 @@ title: Classical Mechanics
 code: PHYS 725
 term: Fall 2026
 topic: Physics
-order: 4
+order: 1
 status: In progress
 back_url: /coursework/
 back_label: coursework

@@ -3,7 +3,7 @@ title: Computational Physics
 code: PHYS 701
 term: Spring 2026
 topic: Physics
-order: 1
+order: 2
 status: In progress
 back_url: /coursework/
 back_label: coursework
