@@ -1,0 +1,20 @@
+---
+layout: default
+---
+<div class="shell page-wrap">
+  <header class="page-heading{% if page.mascot_image %} page-heading-with-mascot{% endif %}">
+    <div class="page-heading-copy">
+      <p class="eyebrow">{{ page.eyebrow | default: "Field notes" }}</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    </div>
+    {% if page.mascot_image %}
+      <figure class="page-mascot">
+        <img src="{{ page.mascot_image | relative_url }}" alt="{{ page.mascot_alt }}" width="1254" height="1254">
+        {% if page.mascot_caption %}<figcaption>{{ page.mascot_caption }}</figcaption>{% endif %}
+      </figure>
+    {% endif %}
+  </header>
+  <div class="prose">{{ content }}</div>
+</div>
+

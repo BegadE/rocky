@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="{{ page.lang | default: site.lang | default: 'en' }}">
+  {% include head.html %}
+  <body class="{{ page.body_class }}">
+    <div class="page-grid" aria-hidden="true"></div>
+    {% include header.html %}
+    <main id="main-content">{{ content }}</main>
+    {% include footer.html %}
+    <script src="{{ '/assets/js/site.js' | relative_url }}" defer></script>
+  {% if page.rubiks_player %}
+    <script src="{{ '/assets/js/rubiks-lab.js' | relative_url }}" defer></script>
+  {% endif %}
+  </body>
+</html>
+

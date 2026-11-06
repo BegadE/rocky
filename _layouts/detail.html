@@ -1,0 +1,26 @@
+---
+layout: default
+---
+<article class="shell article-wrap">
+  <header class="article-header detail-header{% if page.mascot_image %} has-mascot{% endif %}">
+    <a class="back-link" href="{{ page.back_url | default: '/' | relative_url }}">← Back to {{ page.back_label | default: "home" }}</a>
+    <p class="eyebrow">{{ page.eyebrow }}</p>
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    <dl class="fact-grid">
+      {% if page.code %}<div><dt>Course</dt><dd>{{ page.code }}</dd></div>{% endif %}
+      {% if page.term %}<div><dt>Term</dt><dd>{{ page.term }}</dd></div>{% endif %}
+      {% if page.status %}<div><dt>Status</dt><dd>{{ page.status }}</dd></div>{% endif %}
+      {% if page.tools %}<div><dt>Tools</dt><dd>{{ page.tools | join: ", " }}</dd></div>{% endif %}
+      {% if page.links %}<div><dt>Links</dt><dd>{% for link in page.links %}<a href="{{ link.url }}">{{ link.label }}</a>{% unless forloop.last %} · {% endunless %}{% endfor %}</dd></div>{% endif %}
+    </dl>
+    {% if page.mascot_image %}
+      <figure class="detail-mascot">
+        <img src="{{ page.mascot_image | relative_url }}" alt="{{ page.mascot_alt }}" width="1254" height="1254">
+        {% if page.mascot_caption %}<figcaption>{{ page.mascot_caption }}</figcaption>{% endif %}
+      </figure>
+    {% endif %}
+  </header>
+  <div class="prose article-content detail-content">{{ content }}</div>
+</article>
+

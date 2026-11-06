@@ -1,0 +1,106 @@
+- name: Vertical Stripes
+  page: 6
+  algorithm: "F U F R L2 B D' R D2 L D' B R2 L F U F"
+- name: Kilt (Scottish Skirt)
+  page: 7
+  algorithm: "U' R2 L2 F2 B2 U' R L F B' U F2 D2 R2 L2 F2 U2 F2 U' F2"
+- name: Gift Box
+  page: 8
+  algorithm: "U B2 R2 B2 L2 F2 R2 D' F2 L2 B F' L F2 D U' R2 F' L' R'"
+- name: Python
+  page: 9
+  algorithm: "F2 R' B' U R' L F' L F' B D' R B L2"
+- name: Tetris
+  page: 10
+  algorithm: "L R F B U' D' L' R'"
+- name: Cube in a Cube
+  page: 11
+  algorithm: "F L F U' R U F2 L2 U' L' B D' B' L2 U"
+- name: Weirdo
+  page: 12
+  algorithm: "R' F' U F2 U' F R' F2 D2 F2 D2 F2 D F2 R2 U2"
+- name: Spiral Pattern
+  page: 13
+  algorithm: "L' B' D U R U' R' D2 R2 D L D' L' R' F U"
+- name: Exchanged Rings
+  page: 14
+  algorithm: "B' U' B' L' D B U D2 B U L D' L' U' L2 D"
+- name: Quick Maths 1+1
+  page: 15
+  algorithm: "R L F2 U2 R' L' F2 U2 R2 F2 U R2 L2 F2 B2 D'"
+- name: Mirror
+  page: 16
+  algorithm: "U D F2 B2 U' D' R2 L2 B2"
+- name: Ron's Cube in a Cube
+  page: 17
+  algorithm: "F D' F' R D F' R' D R D L' F L D R' F D'"
+- name: Staircase
+  page: 18
+  algorithm: "L2 F2 D' L2 B2 D' U' R2 B2 U' L' B2 L D L B' D L' U"
+  note: The animation follows the printed moves. The guide's illustration differs from the resulting cube.
+- name: Yin Yang
+  page: 19
+  algorithm: "R L B F R L U' D' F' B' U D"
+- name: Exchanged Feet Duck
+  page: 20
+  algorithm: "U F R2 F' D' R U B2 U2 F' R2 F D B2 R B'"
+- name: Flower Field
+  page: 21
+  algorithm: "L' R F' B L R' F B' R2 L2 U2 D2 F2 B2"
+  note: The animation follows the printed moves. The guide's illustration differs from the resulting cube.
+- name: Wrapped 2x2
+  page: 22
+  algorithm: "D' B2 F2 L2 U' F2 R2 D F2 U2 L' B R' U' L' F D' F L D2"
+- name: Displaced Motif
+  page: 23
+  algorithm: "L2 B2 D' B2 D L2 U R2 D R2 B U R' F2 R U' B' U'"
+- name: Exchanged Peaks
+  page: 24
+  algorithm: "F U2 L F L' B L U B' R' L' U R' D' F' B R2"
+- name: Cage
+  page: 25
+  algorithm: "L U F2 R L' U2 B' U D B2 L F B' R' L F' R"
+- name: Anaconda
+  page: 26
+  algorithm: "L U B' U' R L' B R' F B' D R D' F'"
+- name: Perfect Scramble
+  page: 27
+  algorithm: "D2 F2 R2 D2 L2 U F2 U' F' U F2 U' R2 B' F R' D2 F' D' L"
+  note: The animation follows the printed moves. The guide's illustration differs from the resulting cube.
+- name: Cube in a Cube in a Cube
+  page: 28
+  algorithm: "U' L' U' F' R2 B' R F U B2 U B' L U' F U R F'"
+- name: Order in Chaos
+  page: 29
+  algorithm: "B L2 B' U2 B F2 U L U B U' R U' B F U' R D R B' U'"
+- name: Dots
+  page: 30
+  algorithm: "E M' E' M"
+  guide_slices: true
+  note: Uses the M/E turn directions drawn in the guide.
+- name: Union Jack
+  page: 31
+  algorithm: "U F B' L2 U2 L2 F' B U2 L2 U"
+- name: Cross
+  page: 32
+  algorithm: "D2 F2 R2 D2 L2 U F2 U' F' U F2 U' R2 B' F R' D2 F'"
+  note: The animation follows the printed moves. The guide's illustration differs from the resulting cube.
+- name: Wire
+  page: 33
+  algorithm: "R L F B R L F B R L F B R2 B2 L2 R2 B2 L2"
+- name: Flipped Tips
+  page: 34
+  algorithm: "U B D' F2 D B' U' R2 D F2 D' R2 D F2 D' R2"
+- name: Checkboard in the Cube
+  page: 35
+  algorithm: "B D F' B' D L2 U L U' B D' R B R D' R L' F U2 D"
+- name: Megatron
+  page: 36
+  algorithm: "U L D R' F D2 R2 F2 R' F D2 B L2 U2 D' R2 U R2 B2 L2"
+  view: "z'"
+- name: Alert
+  page: 37
+  algorithm: "U' R2 L2 F2 B2 U' R L F B' U F2 D2 R2 L2 F2 U2 F2 U' F2 M' E M E'"
+  guide_slices: true
+  view: x y
+  note: Includes the Kilt setup and uses the M/E turn directions drawn in the guide.

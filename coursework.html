@@ -1,0 +1,22 @@
+---
+title: Coursework
+permalink: /coursework/
+eyebrow: Study shelf
+description: Organized notes and resources from the courses I have taken, preserved for future me—and anyone else who finds them useful.
+mascot_image: /assets/images/rocky/rocky-coursework.png
+mascot_alt: Rocky the rockhopper penguin reading at a low table.
+mascot_caption: Rocky studies up.
+---
+<div class="collection-grid">
+  {% assign courses = site.coursework | sort: "order" %}
+  {% for course in courses %}
+    <a class="collection-card" href="{{ course.url | relative_url }}">
+      <div class="collection-title">
+        <h2>{{ course.title }}</h2>
+        <span class="collection-code">{{ course.code }}</span>
+      </div>
+      <span class="collection-term">{{ course.term | default: course.topic }}</span>
+    </a>
+  {% endfor %}
+</div>
+

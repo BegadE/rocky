@@ -1,0 +1,17 @@
+#!/bin/sh
+set -eu
+
+if [ -x /opt/homebrew/opt/ruby/bin/ruby ]; then
+  PATH="/opt/homebrew/opt/ruby/bin:/opt/homebrew/lib/ruby/gems/4.0.0/bin:$PATH"
+  export PATH
+fi
+
+if ! command -v ruby >/dev/null 2>&1 || ! ruby -e 'exit(RUBY_VERSION.to_f >= 2.7 ? 0 : 1)'; then
+  echo "A modern Ruby is required. On macOS, install it with: brew install ruby" >&2
+  exit 1
+fi
+
+bundle config set --local path vendor/bundle
+bundle install
+echo "Setup complete. Run ./bin/serve to preview the website."
+

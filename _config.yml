@@ -1,0 +1,62 @@
+title: "Begad's Field Notes"
+tagline: "Coursework, projects, small discoveries, and the things I enjoy."
+description: "A personal corner of the internet for learning in public."
+url: ""
+baseurl: ""
+author:
+  name: "Begad"
+  email: "begadelsaid@outlook.com"
+  bio: "Student, builder, and enthusiast of ideas worth sharing."
+  location: "Dubai, UAE"
+
+social:
+  github: "https://github.com/BegadE/"
+  linkedin: "https://www.linkedin.com/in/begad42/"
+
+permalink: /writing/:year/:month/:day/:title/
+timezone: Asia/Dubai
+
+collections:
+  coursework:
+    output: true
+    permalink: /coursework/:name/
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+  - scope:
+      path: ""
+      type: coursework
+    values:
+      layout: detail
+      eyebrow: Coursework
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: detail
+      eyebrow: Project
+  - scope:
+      path: ""
+    values:
+      layout: page
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+feed:
+  path: feed.xml
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+

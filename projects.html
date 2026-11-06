@@ -1,0 +1,29 @@
+---
+title: Projects
+permalink: /projects/
+eyebrow: Things made
+description: Experiments, useful tools, and small ideas taken far enough to teach me something.
+mascot_image: /assets/images/rocky/rocky-projects.png
+mascot_alt: Rocky the rockhopper penguin wearing a yellow hard hat.
+mascot_caption: Rocky gets to work.
+---
+<div class="project-grid">
+  {% assign projects = site.projects | sort: "order" %}
+  {% for project in projects %}
+    <a class="project-card" href="{{ project.url | relative_url }}">
+      <div class="project-card-top">
+        <span class="project-symbol" aria-hidden="true">{{ project.symbol | default: "⌁" }}</span>
+        <span>{{ project.year }}</span>
+      </div>
+      <div class="project-card-copy">
+        <div class="meta-line">{{ project.status }}</div>
+        <h2>{{ project.title }}</h2>
+      </div>
+      <div class="project-card-footer">
+        <span>{{ project.tools | join: " · " }}</span>
+        <span aria-hidden="true">↗</span>
+      </div>
+    </a>
+  {% endfor %}
+</div>
+

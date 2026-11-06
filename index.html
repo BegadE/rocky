@@ -1,0 +1,88 @@
+---
+layout: default
+title: Home
+body_class: home
+---
+<section class="hero shell">
+  <div class="hero-copy">
+    <p class="eyebrow"><span class="status-pulse"></span> A personal field journal</p>
+    <h1>I collect ideas,<br><em>then make them useful.</em></h1>
+    <p class="hero-intro">I’m {{ site.author.name }}. This is where coursework meets side projects, technical notes, and everything I’m curious enough to investigate.</p>
+    <div class="hero-actions">
+      <a class="button button-primary" href="{{ '/writing/' | relative_url }}">Read the notes <span>↗</span></a>
+      <a class="button button-secondary" href="{{ '/about/' | relative_url }}">A little about me</a>
+    </div>
+  </div>
+  <figure class="hero-mascot" aria-label="Rocky, a cheerful watercolor penguin waving hello">
+    <div class="hero-mascot-stage">
+      <img class="hero-mascot-frame hero-mascot-wave" src="{{ '/assets/images/rocky/rocky-wave.png' | relative_url }}" alt="" width="1254" height="1254" fetchpriority="high">
+      <img class="hero-mascot-frame hero-mascot-rest" src="{{ '/assets/images/rocky/rocky-rest.png' | relative_url }}" alt="" width="1254" height="1254" aria-hidden="true">
+    </div>
+    <figcaption>Rocky says hi!</figcaption>
+  </figure>
+</section>
+
+<section class="manifesto">
+  <div class="shell manifesto-grid">
+    <p class="section-number">01 / WHY</p>
+    <blockquote>“A notebook becomes more valuable when you can leave the door open.”</blockquote>
+    <p>This site is an evolving record, not a polished portfolio. Expect useful notes, unfinished questions, and the occasional deep dive.</p>
+  </div>
+</section>
+
+<section class="shell section-block">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Recently added</p>
+      <h2>Latest from the notebook</h2>
+    </div>
+    <a class="text-link" href="{{ '/writing/' | relative_url }}">Browse the archive <span>→</span></a>
+  </div>
+  <div class="post-list">
+    {% for post in site.posts limit: 3 %}{% include post-card.html post=post %}{% endfor %}
+  </div>
+</section>
+
+<section class="shell section-block explore-section">
+  <div class="section-heading">
+    <div>
+      <p class="eyebrow">Pick a path</p>
+      <h2>Explore by shelf</h2>
+    </div>
+  </div>
+  <div class="shelf-grid">
+    <a class="shelf-card" href="{{ '/coursework/' | relative_url }}">
+      <span class="shelf-index">A—01</span>
+      <div class="shelf-card-body">
+        <div><h3>Coursework</h3><p>Lecture notes, study guides, and lessons worth keeping.</p></div>
+        <img class="shelf-card-mascot" src="{{ '/assets/images/rocky/rocky-coursework.png' | relative_url }}" alt="" width="1254" height="1254" loading="lazy">
+      </div>
+      <span class="shelf-arrow">↗</span>
+    </a>
+    <a class="shelf-card" href="{{ '/writing/' | relative_url }}">
+      <span class="shelf-index">A—02</span>
+      <div class="shelf-card-body">
+        <div><h3>Waddle</h3><p>Notes, explanations, project logs, and curious detours.</p></div>
+        <img class="shelf-card-mascot" src="{{ '/assets/images/rocky/rocky-waddle.png' | relative_url }}" alt="" width="1254" height="1254" loading="lazy">
+      </div>
+      <span class="shelf-arrow">↗</span>
+    </a>
+    <a class="shelf-card" href="{{ '/projects/' | relative_url }}">
+      <span class="shelf-index">A—03</span>
+      <div class="shelf-card-body">
+        <div><h3>Projects</h3><p>Things I have designed, coded, tested, or taken apart.</p></div>
+        <img class="shelf-card-mascot" src="{{ '/assets/images/rocky/rocky-projects.png' | relative_url }}" alt="" width="1254" height="1254" loading="lazy">
+      </div>
+      <span class="shelf-arrow">↗</span>
+    </a>
+    <a class="shelf-card" href="{{ '/about/' | relative_url }}">
+      <span class="shelf-index">A—04</span>
+      <div class="shelf-card-body">
+        <div><h3>Off-screen</h3><p>Hobbies, interests, recommendations, and the human bits.</p></div>
+        <img class="shelf-card-mascot" src="{{ '/assets/images/rocky/rocky-about.png' | relative_url }}" alt="" width="1254" height="1254" loading="lazy">
+      </div>
+      <span class="shelf-arrow">↗</span>
+    </a>
+  </div>
+</section>
+

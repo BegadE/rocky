@@ -1,0 +1,57 @@
+<section class="rubiks-gallery" aria-labelledby="pattern-gallery-title">
+  <header class="rubiks-gallery-heading">
+    <p class="rubiks-kicker">From the pattern guide</p>
+    <h2 id="pattern-gallery-title">Pick a pattern</h2>
+    <p>{{ site.data.rubiks_patterns.size }} patterns to try. Pick one to watch it take shape.</p>
+  </header>
+  <div class="rubiks-pattern-grid">
+    {% for pattern in site.data.rubiks_patterns %}
+    {% assign preview = '/assets/projects/rubiks/patterns/' | append: pattern.page | append: '.webp' %}
+    <button class="rubiks-pattern-card" type="button" data-pattern-name="{{ pattern.name | escape }}" data-pattern-alg="{{ pattern.algorithm | escape }}" data-pattern-page="{{ pattern.page }}" data-pattern-note="{{ pattern.note | escape }}" data-pattern-view="{{ pattern.view | escape }}" data-guide-slices="{{ pattern.guide_slices }}" aria-label="Animate {{ pattern.name | escape }}" aria-haspopup="dialog">
+      <img src="{{ preview | relative_url }}" alt="" width="480" height="480" loading="lazy">
+      <span>{{ pattern.name }}</span>
+    </button>
+    {% endfor %}
+  </div>
+</section>
+
+<dialog class="rubiks-pattern-dialog" data-pattern-dialog aria-labelledby="pattern-player-title">
+  <section class="rubiks-lab rubiks-mini" data-pattern-player data-guide-palette>
+    <div class="rubiks-stripes" aria-hidden="true"></div>
+    <header class="rubiks-mini-heading">
+      <div>
+        <p class="rubiks-kicker">Pattern player</p>
+        <h2 id="pattern-player-title" data-pattern-title>Pattern</h2>
+        <a data-pattern-source href="{{ '/assets/projects/rubiks/pattern-guide.pdf' | relative_url }}">View in the guide</a>
+      </div>
+      <button type="button" class="rubiks-dialog-close" data-close-pattern aria-label="Close pattern player" autofocus>×</button>
+    </header>
+    <input type="hidden" data-cube-algorithm value="">
+    <div class="rubiks-stage">
+      <div class="cube-viewport">
+        <canvas data-cube-canvas tabindex="0" role="img" aria-label="Interactive 3D pattern cube" aria-describedby="pattern-view-help">Your browser needs canvas support to display the 3D cube.</canvas>
+        <span class="cube-move-badge" data-current-move aria-hidden="true">3 × 3</span>
+      </div>
+      <p id="pattern-view-help">Drag to look around</p>
+      <button class="cube-reset-view" type="button" data-cube-action="view">Reset view</button>
+    </div>
+    <div class="rubiks-controls">
+      <div class="rubiks-transport" aria-label="Pattern animation controls">
+        <button type="button" data-cube-action="start" aria-label="Jump to the start">|◀</button>
+        <button type="button" data-cube-action="back" aria-label="Previous turn">‹</button>
+        <button type="button" data-cube-action="play">Play</button>
+        <button type="button" data-cube-action="pause">Pause</button>
+        <button type="button" data-cube-action="next" aria-label="Next turn">›</button>
+        <button type="button" data-cube-action="end" aria-label="Jump to the end">▶|</button>
+      </div>
+      <label class="rubiks-speed" for="pattern-speed"><span>Animation speed</span><output data-speed-output for="pattern-speed">1×</output></label>
+      <input id="pattern-speed" data-cube-speed type="range" min="0.5" max="3" step="0.25" value="1">
+      <p class="rubiks-status" data-rubiks-status aria-live="polite">Ready.</p>
+      <p class="rubiks-pattern-note" data-pattern-note-display hidden></p>
+    </div>
+    <div class="rubiks-sequence">
+      <div class="rubiks-sequence-heading"><span>Turn sequence</span><output data-move-counter>0 / 0</output></div>
+      <div class="rubiks-move-list" data-move-list aria-label="Pattern turn sequence"></div>
+    </div>
+  </section>
+</dialog>

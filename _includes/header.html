@@ -1,0 +1,27 @@
+<header class="site-header">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="shell header-inner">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }}, home">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span class="brand-text">{{ site.author.name }}</span>
+    </a>
+
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-navigation">
+      <span></span><span></span><span></span>
+      <span class="sr-only">Toggle navigation</span>
+    </button>
+
+    <nav id="site-navigation" class="site-nav" aria-label="Main navigation">
+      {% for item in site.data.navigation %}
+        {% assign active = false %}
+        {% if page.url == item.url %}{% assign active = true %}{% endif %}
+        {% if item.url != '/' and page.url contains item.url %}{% assign active = true %}{% endif %}
+        <a href="{{ item.url | relative_url }}"{% if active %} class="is-active" aria-current="page"{% endif %}>{{ item.title }}</a>
+      {% endfor %}
+      <button class="theme-toggle" type="button" aria-label="Switch color theme" title="Switch color theme">
+        <svg class="sun-icon" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.66 6.34l1.41-1.41"/></svg>
+      </button>
+    </nav>
+  </div>
+</header>
+
