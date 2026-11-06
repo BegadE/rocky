@@ -3,7 +3,7 @@ title: Quantum Mechanics
 code: PHYS 717
 term: Fall 2025
 topic: Physics
-order: 6
+order: 7
 status: Complete
 back_url: /coursework/
 back_label: coursework

@@ -3,7 +3,7 @@ title: Statistical Mechanics
 code: PHYS 716
 term: Spring 2026
 topic: Physics
-order: 7
+order: 5
 status: In progress
 back_url: /coursework/
 back_label: coursework
