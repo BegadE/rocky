@@ -9,10 +9,7 @@ layout: default
       {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
     </div>
     {% if page.mascot_image %}
-      <figure class="page-mascot">
-        <img src="{{ page.mascot_image | relative_url }}" alt="{{ page.mascot_alt }}" width="1254" height="1254">
-        {% if page.mascot_caption %}<figcaption>{{ page.mascot_caption }}</figcaption>{% endif %}
-      </figure>
+      {% include mascot.html class="page-mascot" %}
     {% endif %}
   </header>
   <div class="prose">{{ content }}</div>

@@ -1,4 +1,4 @@
-# Begad's Field Notes
+# Rocky
 
 A custom Jekyll personal website for coursework, writing, projects, and hobbies. The design is original; its broad “one site for everything” structure is inspired by [slama.dev](https://slama.dev/).
 
@@ -21,7 +21,7 @@ Ruby and the website dependencies are already installed on this Mac. From this p
 ./bin/serve
 ```
 
-Then open <http://localhost:4000>. Stop the server with `Control-C`.
+Then open <http://localhost:4000/rocky/>. Stop the server with `Control-C`.
 
 The helper selects Homebrew Ruby automatically. If the project is moved to another computer, run `./bin/setup` once before `./bin/serve`. To check that the website builds without starting a server, run `./bin/build`.
 
@@ -72,27 +72,11 @@ Create `assets/images/` for images and `assets/files/` for PDFs. Use them in Mar
 
 ## Publish with GitHub Pages
 
-1. On GitHub, create an empty repository named `YOUR-USERNAME.github.io` for a main personal site. Do not add a README or `.gitignore` on GitHub because both already exist here. A normal repository name also works, but the public URL includes that repository name.
-2. In `_config.yml`, replace `YOUR-USERNAME` in the GitHub link and set:
+The repository is [BegadE/rocky](https://github.com/BegadE/rocky). The site is configured for <https://begade.github.io/rocky/> with `url: "https://begade.github.io"` and `baseurl: "/rocky"` in `_config.yml`.
 
-   ```yaml
-   url: "https://YOUR-USERNAME.github.io"
-   baseurl: ""
-   ```
+The Git remote uses this Mac's existing `github-personal` SSH alias, which selects the personal GitHub key. On another computer, use `git@github.com:BegadE/rocky.git` with an SSH key authorized for that account.
 
-   For a normal repository named `personal-website`, use `baseurl: "/personal-website"` instead.
-3. From this folder, connect and push the local project (replace both instances of `YOUR-USERNAME`):
-
-   ```sh
-   git add .
-   git commit -m "Launch personal website"
-   git remote add origin https://github.com/YOUR-USERNAME/YOUR-USERNAME.github.io.git
-   git push -u origin main
-   ```
-
-4. In the GitHub repository, open **Settings → Pages**.
-5. Under **Build and deployment → Source**, select **GitHub Actions**.
-6. Open the repository's **Actions** tab. When the “Deploy Jekyll site to Pages” run shows a green check, the site is online.
+In the repository's **Settings → Pages**, select **GitHub Actions** under **Build and deployment → Source**. When “Deploy Jekyll site to Pages” in the **Actions** tab shows a green check, the site is online.
 
 Every later update uses the same three commands:
 
@@ -114,11 +98,15 @@ If you publish at a custom domain later, fill in `url` in `_config.yml`. The sit
 | `_projects/` | One Markdown file per project |
 | `about.md` | Your biography and hobbies |
 | `assets/css/main.css` | Colors, typography, and layout |
-| `assets/js/site.js` | Dark mode, mobile navigation, archive search |
+| `assets/js/site.js` | Dark mode and mobile navigation |
+| `assets/js/rubiks-lab.js` | Interactive cube and pattern players |
+| `bin/` | Local setup, build, and preview commands |
 | `_layouts/` | Shared HTML page structures |
 | `.github/workflows/pages.yml` | Automatic GitHub Pages deployment |
 
 ## Customize the look
 
 The visual system uses one blue accent family: `--accent`, `--accent-strong`, and `--accent-soft` at the top of `assets/css/main.css`. Body and display text use Raleway, loaded in `_includes/head.html`. The site supports light mode, dark mode, mobile screens, keyboard navigation, reduced motion, RSS, and basic SEO metadata.
+
+Temporary diagnostics and screenshots belong in `tmp/`. That folder is ignored by Git and excluded from the published site, along with the local `bin/` scripts.
 

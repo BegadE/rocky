@@ -43,14 +43,7 @@ links:
         <button type="button" data-cube-action="clear">Clear</button>
       </div>
 
-      <div class="rubiks-transport" aria-label="Animation controls">
-        <button type="button" data-cube-action="start" aria-label="Jump to the start">|◀</button>
-        <button type="button" data-cube-action="back" aria-label="Previous turn">‹</button>
-        <button type="button" data-cube-action="play">Play</button>
-        <button type="button" data-cube-action="pause">Pause</button>
-        <button type="button" data-cube-action="next" aria-label="Next turn">›</button>
-        <button type="button" data-cube-action="end" aria-label="Jump to the end">▶|</button>
-      </div>
+      {% include rubiks-transport.html label="Animation controls" %}
 
       <label class="rubiks-speed" for="cube-speed">
         <span>Animation speed</span>

@@ -79,7 +79,6 @@
 @media (max-width: 760px) {
   .rubiks-workbench, .rubiks-turns { grid-template-columns: 1fr; }
   .rubiks-stage { border-right: 0; border-bottom: 1px solid #e1e3e7; }
-  .rubiks-stage { min-height: 390px; }
   .rubiks-turn-grid { grid-template-columns: repeat(5, 1fr); }
   .rubiks-turn-grid .turn-slice { grid-column: span 1; }
 }
@@ -87,8 +86,7 @@
 @media (max-width: 480px) {
   .rubiks-lab { margin-inline: -8px; }
   .rubiks-lab-heading, .rubiks-controls, .rubiks-turns, .rubiks-sequence { padding-left: 20px; padding-right: 20px; }
-  .rubiks-stage { padding: 10px; }
-  .rubiks-stage { min-height: 350px; }
+  .rubiks-stage { padding: 10px; min-height: 350px; }
   .cube-viewport { height: 290px; }
   .rubiks-turn-grid { grid-template-columns: repeat(3, 1fr); }
 }

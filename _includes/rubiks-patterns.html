@@ -36,14 +36,7 @@
       <button class="cube-reset-view" type="button" data-cube-action="view">Reset view</button>
     </div>
     <div class="rubiks-controls">
-      <div class="rubiks-transport" aria-label="Pattern animation controls">
-        <button type="button" data-cube-action="start" aria-label="Jump to the start">|◀</button>
-        <button type="button" data-cube-action="back" aria-label="Previous turn">‹</button>
-        <button type="button" data-cube-action="play">Play</button>
-        <button type="button" data-cube-action="pause">Pause</button>
-        <button type="button" data-cube-action="next" aria-label="Next turn">›</button>
-        <button type="button" data-cube-action="end" aria-label="Jump to the end">▶|</button>
-      </div>
+      {% include rubiks-transport.html label="Pattern animation controls" %}
       <label class="rubiks-speed" for="pattern-speed"><span>Animation speed</span><output data-speed-output for="pattern-speed">1×</output></label>
       <input id="pattern-speed" data-cube-speed type="range" min="0.5" max="3" step="0.25" value="1">
       <p class="rubiks-status" data-rubiks-status aria-live="polite">Ready.</p>

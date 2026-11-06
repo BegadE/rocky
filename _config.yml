@@ -1,8 +1,8 @@
-title: "Begad's Field Notes"
+title: "Rocky"
 tagline: "Coursework, projects, small discoveries, and the things I enjoy."
 description: "A personal corner of the internet for learning in public."
-url: ""
-baseurl: ""
+url: "https://begade.github.io"
+baseurl: "/rocky"
 author:
   name: "Begad"
   email: "begadelsaid@outlook.com"
@@ -59,4 +59,6 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - vendor
+  - bin
+  - tmp
 
